@@ -1,0 +1,1 @@
+<h1 class="font-semibold line-clamp-2 leading-[1.1] text-sm hover:underline"> <slot>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex possimus error excepturi quasi et atque quibusdam exercitationem, molestias provident ea!</slot> </h1>
