@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
     import MainLogo from '$lib/assets/logo.png'
 </script>
 

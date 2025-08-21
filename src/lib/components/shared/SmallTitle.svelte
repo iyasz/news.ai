@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   const today = new Date().toLocaleDateString("en-GB", {
     day: "2-digit",
     month: "short",
