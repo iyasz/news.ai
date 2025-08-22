@@ -26,7 +26,6 @@
 
                     <a href="{data.url}" class="items-center gap-2 hover:underline md:text-sm text-xs mt-2 md:flex hidden">
                         See more 
-                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg> -->
                          <img src={TopRightArrow} alt="top right arrow icon">
                     </a>
                 </div>
