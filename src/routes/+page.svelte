@@ -65,7 +65,6 @@
 
             const res = await fetch("/api/news");
             const datas = await res.json(); 
-            console.log(datas)
             news = datas;
 
             // Hero 
