@@ -1,6 +1,6 @@
 
 <script>
-    import MainLogo from '$lib/assets/logo.png'
+    import MainLogo from '$lib/assets/logo.webp'
     import { onMount } from "svelte";
     import { openModal } from "$lib/stores/modal";
     import Search from "$lib/assets/svg/Search.svg"
@@ -21,7 +21,7 @@
     <div class="py-4 flex gap-5 items-center justify-between">
         <div class="navbar-brand">
             <a href="/">
-                <img src="{MainLogo}" alt="Brand logo" width="140px" />
+                <img src="{MainLogo}" alt="Brand logo" class="w-[140px] h-[28px]" />
             </a>
         </div>
         <div class="flex items-center gap-7">

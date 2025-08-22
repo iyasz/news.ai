@@ -55,7 +55,7 @@ export async function GET() {
     return new Response(JSON.stringify(sortData), {
         headers: { 
             "Content-Type": "application/json",
-            "Cache-Control": "public, max-age=30000",
+            "Cache-Control": "public, max-age=300",
         }
     })
 }

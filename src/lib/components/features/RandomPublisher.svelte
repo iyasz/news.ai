@@ -3,7 +3,7 @@
     import LargeTitle from "../shared/LargeTitle.svelte";
     import SectionTitle from "../shared/SectionTitle.svelte";
     import SmallTitle from "../shared/SmallTitle.svelte";
-    import defaultThumbnail from "$lib/assets/default_thumbnail.png"
+    import defaultThumbnail from "$lib/assets/default_thumbnail.webp"
     import { formatDate } from "$lib/utils/formatDate";
 	import Thumbnail from "../shared/Thumbnail.svelte";
     import TopRightArrow from "$lib/assets/svg/TopRightArrow.svg"
@@ -26,7 +26,7 @@
 
                     <a href="{data.url}" class="items-center gap-2 hover:underline md:text-sm text-xs mt-2 md:flex hidden">
                         See more 
-                         <img src={TopRightArrow} alt="top right arrow icon">
+                        <img src={TopRightArrow} alt="top right arrow icon">
                     </a>
                 </div>
                 <Thumbnail src={data.thumbnail} styleClass="md:w-[450px] w-[140px] md:h-[250px] h-[140px] shrink-0" />

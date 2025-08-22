@@ -1,7 +1,7 @@
 <script>
     import MediumTitle from "../shared/MediumTitle.svelte";
     import SmallTitle from "../shared/SmallTitle.svelte";
-    import defaultThumbnail from "$lib/assets/default_thumbnail.png"
+    import defaultThumbnail from "$lib/assets/default_thumbnail.webp"
     import { formatDate } from "$lib/utils/formatDate";
 	import Thumbnail from "../shared/Thumbnail.svelte";
 

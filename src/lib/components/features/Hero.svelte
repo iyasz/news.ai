@@ -3,7 +3,7 @@
     import MediumTitle from "../shared/MediumTitle.svelte";
     import SectionTitle from "../shared/SectionTitle.svelte";
     import SmallTitle from "../shared/SmallTitle.svelte";
-    import defaultThumbnail from "$lib/assets/default_thumbnail.png"
+    import defaultThumbnail from "$lib/assets/default_thumbnail.webp"
     import { formatDate } from "$lib/utils/formatDate";
 	import Thumbnail from "../shared/Thumbnail.svelte";
 
@@ -14,7 +14,7 @@
 <div class="grid grid-cols-12 gap-4">
     <div class="lg:col-span-8 col-span-12">
         <div class="md:flex block gap-3 bg-slate-50 ">
-            <Thumbnail src={mainNews.thumbnail} styleClass="md:w-[50%] w-full md:h-[430px] h-[350px]" />
+            <Thumbnail src={mainNews.thumbnail} styleClass="md:w-[50%] w-full md:h-[430px] h-[350px]" fetchpriority="high" />
             <div class="p-4 flex flex-col">
                 <div>
                     <p class="text-red-600 font-semibold mb-4">{mainNews.source}</p>
