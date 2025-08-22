@@ -104,7 +104,7 @@
     <div class="w-6xl lg:mx-0 m-5">
 
         {#if isLoading}
-            <h1>keren</h1>
+            <Index/>  
         {:else if error}
             <div class="text-center py-12">
                 <div class="text-red-500 text-xl mb-4">Failed to load news</div>
@@ -116,8 +116,6 @@
                 </button>
             </div>
         {:else}
-            <Index/>  
-
             <Modal {searchResults} on:search={e => handleSearch(e.detail)} />
 
             <Navbar/> 
