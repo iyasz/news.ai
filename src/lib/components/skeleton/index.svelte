@@ -1,45 +1,38 @@
 <div class="animate-pulse">
-    <div class="mb-8">
-        <div class="h-96 bg-gray-200 rounded-lg mb-4"></div>
+    <div class="mb-6">
+        <div class=" mb-4 grid grid-cols-12 gap-4">
+            <div class="col-span-8">
+                <div class="h-96 bg-gray-200 rounded-lg"></div>
+            </div>
+            <div class="col-span-4">
+                <div class="h-96 bg-gray-200 rounded-lg"></div>
+            </div>
+        </div>
+        <div class="w-full h-28 bg-gray-200 rounded-lg"> </div>
+    </div>
+    
+    <div class="mb-6">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="h-32 bg-gray-200 rounded"></div>
-            <div class="h-32 bg-gray-200 rounded"></div>
-            <div class="h-32 bg-gray-200 rounded"></div>
+            <div class="h-56 bg-gray-200 rounded w-full"></div>
+            <div class="h-56 bg-gray-200 rounded w-full"></div>
+            <div class="h-56 bg-gray-200 rounded w-full"></div>
         </div>
     </div>
-    
-    <div class="mb-8">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div class="h-48 bg-gray-200 rounded"></div>
-            <div class="h-48 bg-gray-200 rounded"></div>
-            <div class="h-48 bg-gray-200 rounded"></div>
-            <div class="h-48 bg-gray-200 rounded"></div>
+
+    <div class="mb-6">
+        <div class=" mb-4 grid grid-cols-12 gap-4">
+            <div class="col-span-9">
+                <div class="h-96 bg-gray-200 rounded-lg"></div>
+            </div>
+            <div class="col-span-3">
+                <div class="h-96 bg-gray-200 rounded-lg"></div>
+            </div>
         </div>
+        <div class="w-full h-28 bg-gray-200 rounded-lg"> </div>
     </div>
-    
-    <div class="mb-8">
-        <div class="h-8 bg-gray-200 rounded w-48 mb-4"></div>
-        <div class="space-y-4">
-            <div class="h-24 bg-gray-200 rounded"></div>
-            <div class="h-24 bg-gray-200 rounded"></div>
-            <div class="h-24 bg-gray-200 rounded"></div>
-        </div>
+
+    <div class="mb-6">
+        <div class="h-72 bg-gray-200 rounded w-full"></div>
     </div>
-    
-    <div class="mb-8">
-        <div class="h-8 bg-gray-200 rounded w-48 mb-4"></div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="h-32 bg-gray-200 rounded"></div>
-            <div class="h-32 bg-gray-200 rounded"></div>
-        </div>
-    </div>
-    
-    <div class="mb-8">
-        <div class="h-8 bg-gray-200 rounded w-48 mb-4"></div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="h-40 bg-gray-200 rounded"></div>
-            <div class="h-40 bg-gray-200 rounded"></div>
-            <div class="h-40 bg-gray-200 rounded"></div>
-        </div>
-    </div>
+
 </div>
