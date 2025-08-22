@@ -6,6 +6,7 @@
     import defaultThumbnail from "$lib/assets/default_thumbnail.png"
     import { formatDate } from "$lib/utils/formatDate";
 	import Thumbnail from "../shared/Thumbnail.svelte";
+    import TopRightArrow from "$lib/assets/svg/TopRightArrow.svg"
     
     export let datas = [];
     export let story = {}; 
@@ -25,7 +26,8 @@
 
                     <a href="{data.url}" class="items-center gap-2 hover:underline md:text-sm text-xs mt-2 md:flex hidden">
                         See more 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg> -->
+                         <img src={TopRightArrow} alt="top right arrow icon">
                     </a>
                 </div>
                 <Thumbnail src={data.thumbnail} styleClass="md:w-[450px] w-[140px] md:h-[250px] h-[140px] shrink-0" />
