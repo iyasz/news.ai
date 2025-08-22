@@ -2,6 +2,8 @@
     import { isModalOpen, closeModal } from "$lib/stores/modal";
     import { fade } from "svelte/transition";
     import { createEventDispatcher } from "svelte";
+    import SearchModalIcon from "$lib/assets/svg/SearchModal.svg"
+    import XIcon from "$lib/assets/svg/X.svg"
 
     export let searchResults = [];
     const dispatch = createEventDispatcher();
@@ -29,13 +31,14 @@
                             autocomplete="off"
                             on:input={onInput} />
                         <div class="absolute inset-y-0 left-0 ps-5 flex items-center pointer-events-none">
-                            <svg width="13" height="13" class="DocSearch-Search-Icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                            <img src={SearchModalIcon} alt="search modal icon" />
                         </div>
 
                         <button on:click={() => {closeModal(); searchResults=[]}} id="closeModal" aria-label="esc" class="text-gray-400 hover:text-gray-600 absolute cursor-pointer right-0 pe-4 inset-y-0">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <!-- <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                            </svg>
+                            </svg> -->
+                            <img src={XIcon} alt="close icon">
                         </button>
 
                     </div>
@@ -52,16 +55,6 @@
                                 </a>
                             {/each}
                         {:else}
-                            <!--<div class="space-y-3">
-                                <div class="search-item p-3 hover:bg-gray-50 rounded-lg cursor-pointer transition-colors border border-transparent hover:border-gray-200">
-                                    <h3 class="font-medium text-gray-900">JavaScript Fundamentals</h3>
-                                    <p class="text-sm text-gray-600">Learn the basics of JavaScript programming</p>
-                                </div>
-                                <div class="search-item p-3 hover:bg-gray-50 rounded-lg cursor-pointer transition-colors border border-transparent hover:border-gray-200">
-                                    <h3 class="font-medium text-gray-900">React Components</h3>
-                                    <p class="text-sm text-gray-600">Building reusable UI components with React</p>
-                                </div>
-                            </div> -->
                             <div id="noResults" class="block text-center py-8">
                                 <p class="text-gray-500">No items found</p>
                             </div>
