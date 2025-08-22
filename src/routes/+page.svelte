@@ -6,30 +6,16 @@
     import ExploreNews from '$lib/components/features/ExploreNews.svelte';
     import Footer from '$lib/components/features/Footer.svelte';
     import AppDash from '$lib/components/shared/AppDash.svelte';
-
     import { onMount } from 'svelte';
 	import Modal from '$lib/components/features/Modal.svelte';
 	import { get } from 'svelte/store';
 	import HeroBottom from '$lib/components/features/HeroBottom.svelte';
 	import Index from '$lib/components/skeleton/index.svelte';
+    import { getRandomData } from '$lib/utils/randomizerData';
+    import { getNewsByPublisher } from "$lib/utils/getNewsByPublisher"
 
-    function getRandomData(arr, count){
-        const shuffled = [...arr].sort(() => 0.5 - Math.random());
-        return shuffled.slice(0, count);
-    }
 
-    function getNewsByPublisher(news, minCount = 3) {
-        const shuffled = [...news].sort(() => 0.5 - Math.random());
 
-        for (const n of shuffled) {
-            const samePublisher = news.filter(item => item.source === n.source);
-            if (samePublisher.length >= minCount) {
-            return samePublisher.slice(0, minCount);
-            }
-        }
-
-        return shuffled.slice(0, minCount);
-    }
 
     function loadMoreNews() {
         const currentLength = getExploreDataNews.length;
@@ -119,7 +105,7 @@
             <Modal {searchResults} on:search={e => handleSearch(e.detail)} />
 
             <Navbar/> 
-            <Hero mainNews={mainNews} picksNews={picksNews} />
+            <Hero {mainNews} {picksNews} />
             <HeroBottom datas={heroBottomNews}/>
             <AppDash/>
             <LatestNews datas={latestNews}/>
