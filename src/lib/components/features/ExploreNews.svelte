@@ -4,6 +4,7 @@
     import SmallTitle from "../shared/SmallTitle.svelte";
     import defaultThumbnail from "$lib/assets/default_thumbnail.png"
     import { formatDate } from "$lib/utils/formatDate";
+	import Thumbnail from "../shared/Thumbnail.svelte";
 
     export let datas = [];
     export let onLoadMore;
@@ -13,17 +14,15 @@
 <div class="">
     <SectionTitle>Explore The News</SectionTitle>
 
-    <div class="flex flex-wrap justify-between mt-5 gap-y-5">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-5">
         {#each datas as data}
-        <a href="{data.url}" class="w-[47%] md:w-[23%]">
-            <div class="w-full md:h-[240px] h-[160px] bg-gray-200 bg-center bg-cover"  style="background-image: url({data.thumbnail || defaultThumbnail})">
-                <img src={data.thumbnail} alt="thumbnail" class="opacity-0 w-full h-full"/>
-            </div>
+            <a href="{data.url}">
+            <Thumbnail src={data.thumbnail} styleClass="w-full md:h-[240px] h-[160px]" />
             <div class="mt-4">
                 <LargeTitle>{data.title}</LargeTitle>
                 <SmallTitle>{formatDate(data.published_at)}</SmallTitle>
             </div>
-        </a>
+            </a>
         {/each}
     </div>
     {#if datas.length < newsLength}

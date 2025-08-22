@@ -5,6 +5,7 @@
     import SmallTitle from "../shared/SmallTitle.svelte";
     import defaultThumbnail from "$lib/assets/default_thumbnail.png"
     import { formatDate } from "$lib/utils/formatDate";
+	import Thumbnail from "../shared/Thumbnail.svelte";
     
     export let datas = [];
     export let story = {}; 
@@ -27,14 +28,14 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
                     </a>
                 </div>
-                <img src="{data.thumbnail}" on:error={(e) => e.currentTarget.src = defaultThumbnail}  alt="thumbnail" loading="lazy" class="md:w-[450px] w-[140px] md:h-[250px] h-[140px] shrink-0 object-cover bg-center shadow-sm" />
+                <Thumbnail src={data.thumbnail} styleClass="md:w-[450px] w-[140px] md:h-[250px] h-[140px] shrink-0" />
             </div>
             {/each}
         </div>
 
         <div class="lg:col-span-3 lg:block hidden h-full">
             <div class="border-l border-slate-300 ps-4 h-full">
-                <img src="{story.thumbnail}" on:error={(e) => e.currentTarget.src = defaultThumbnail}  alt="thumbnail" loading="lazy" class="w-full h-[150px] object-cover bg-center shadow-sm" />
+                <Thumbnail src={story.thumbnail} styleClass="w-full h-[150px]" />
                 <div class="mt-5">
                     <LargeTitle type="a" href="{story.url}">{story.title}</LargeTitle>
                     <DescriptionTitle lineClamp="4">{story.description}</DescriptionTitle>

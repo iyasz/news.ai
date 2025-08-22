@@ -5,6 +5,7 @@
     import SmallTitle from "../shared/SmallTitle.svelte";
     import defaultThumbnail from "$lib/assets/default_thumbnail.png"
     import { formatDate } from "$lib/utils/formatDate";
+	import Thumbnail from "../shared/Thumbnail.svelte";
 
     export let mainNews = {};
     export let picksNews = [];
@@ -13,7 +14,7 @@
 <div class="grid grid-cols-12 gap-4">
     <div class="lg:col-span-8 col-span-12">
         <div class="md:flex block gap-3 bg-slate-50 ">
-            <img src="{mainNews.thumbnail}" on:error={(e) => e.currentTarget.src = defaultThumbnail} alt="thumbnail" loading="lazy" class="md:w-[50%] w-full md:h-[430px] h-[350px] object-cover bg-center shadow-sm" />
+            <Thumbnail src={mainNews.thumbnail} styleClass="md:w-[50%] w-full md:h-[430px] h-[350px]" />
             <div class="p-4 flex flex-col">
                 <div>
                     <p class="text-red-600 font-semibold mb-4">{mainNews.source}</p>
@@ -31,12 +32,12 @@
     <div class="col-span-4 lg:block hidden">
         <SectionTitle>Picks for you</SectionTitle>
         <div class="flex flex-col justify-evenly h-full">
-            {#each picksNews as pick}
-            <a href="{pick.url}" class="flex items-center gap-3">
-                <img src="{pick.thumbnail}" on:error={(e) => e.currentTarget.src = defaultThumbnail} alt="thumbnail" loading="lazy" class="w-[170px] h-[80px] shrink-0 object-cover bg-center shadow-sm" />
+            {#each picksNews as data}
+            <a href="{data.url}" class="flex items-center gap-3">
+                <Thumbnail src={data.thumbnail} styleClass="w-[170px] h-[80px] shrink-0" />
                 <div>
-                    <MediumTitle>{pick.title}</MediumTitle>
-                    <SmallTitle>{formatDate(pick.published_at)}</SmallTitle>
+                    <MediumTitle>{data.title}</MediumTitle>
+                    <SmallTitle>{formatDate(data.published_at)}</SmallTitle>
                 </div>
             </a>
             <hr class="opacity-[0.1]">
