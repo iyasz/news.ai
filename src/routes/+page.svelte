@@ -13,6 +13,7 @@
 	import Index from '$lib/components/skeleton/index.svelte';
     import { getRandomData } from '$lib/utils/randomizerData';
     import { getNewsByPublisher } from "$lib/utils/getNewsByPublisher"
+	import FailedFetch from '$lib/components/errors/FailedFetch.svelte';
 
 
 
@@ -92,15 +93,7 @@
         {#if isLoading}
             <Index/>  
         {:else if error}
-            <div class="text-center py-12">
-                <div class="text-red-500 text-xl mb-4">Failed to load news</div>
-                <p class="text-gray-600 mb-4">{error}</p>
-                <button 
-                    on:click={loadNews}
-                    class="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-blue-600">
-                    Try Again
-                </button>
-            </div>
+            <FailedFetch {error} onRetry={loadNews} />
         {:else}
             <Modal {searchResults} on:search={e => handleSearch(e.detail)} />
 
